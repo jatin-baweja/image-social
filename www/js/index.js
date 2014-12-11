@@ -61,7 +61,7 @@ var app = {
   handleImageClick: function() {
     $('.share-image').on("click", function(e) {
       var $target = $(e.target);
-      window.plugins.socialsharing.share(null, null, $target.attr('src'), null);
+      window.plugins.socialsharing.shareViaWhatsApp('Message via WhatsApp', $target.attr('src'), null /* url */, function() {console.log('share ok')}, function(errormsg){alert(errormsg)});
     });
   }
 };
