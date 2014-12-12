@@ -34,12 +34,10 @@
     <div class="app">
       <h1>Image Social</h1>
       <div class="search_box">
-        <form id="flickr-search-form" action="http://api.flickr.com/services/rest/" method="get">
-          <input type="hidden" value="07fb9764c27988bb8c29a08df3c7b611" name="api_key">
-          <input type="hidden" value="flickr.photos.search" name="method">
-          <input type="hidden" value="1" name="page">
-          <input type="hidden" value="10" name="per_page">
-          <input type="search" id="text" name="text">
+        <form id="flickr-search-form" action="https://ajax.googleapis.com/ajax/services/search/images" method="get">
+          <input type="hidden" value="1.0" name="v">
+          <input type="hidden" value="5" name="rsz">
+          <input type="search" id="text" name="q">
         </form>
       </div>
     </div>
@@ -48,7 +46,7 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
-        app.initialize();
+      app.initialize();
     </script>
   </body>
 </html>
